@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="info">
+            <label for="">Search</label>
+            <div class="inputbox">
+                <input type="search" placeholder="Search Date/Task Name">
+                <button>OK</button>
+            </div>
+            <br><br>
+            <label for=""></label>
+            <select id="filter" onchange="filterTasks()">
+    <option value="" disabled selected>-- Filter --</option>
+    <option value="All">All</option>
+    <option value="Completed">Completed</option>
+    <option value="Pending">Pending</option>
+</select>
+<br><br>
+            <button class="addbtn" onclick="displayTable()">Add</button>
+        </div>
+
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2>Add Task</h2><br>
+                <label>Task Name:</label><br>
+                <input type="text" id="taskName"><br><br>
+
+                <label>Date:</label><br>
+                <input type="date" id="taskDate"><br><br>
+
+                <button onclick="addTask()">Save</button>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+        <div class="tasktable">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="taskList"></tbody>
+            </table>
+
+        </div>
+
+        <script src="index.js"></script>
+
+</body>
+
+</html>

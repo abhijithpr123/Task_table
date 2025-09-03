@@ -65,8 +65,8 @@ option{
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 500px;
 }
 .tasktable h1{
     text-align: center;
@@ -99,4 +99,47 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+}
+#suggestions{
+    position:absolute;
+    top:35px; 
+    left:0; 
+    width:100%;  
+    border:1px solid #ccc;
+    max-height:150px;
+    overflow-y:auto; 
+    background:#fff; 
+    list-style:none; 
+    margin:0; 
+    padding:0; 
+    display:none;
+}
+.slist{
+    padding:5px; 
+    cursor:pointer;
+    height: 40px;
+}
+.closebtn{
+    height: 35px;
+    width: 60px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+.savebtn{
+    height: 35px;
+    width: 60px;
+    background-color: rgb(146, 238, 80);
+    border-radius: 10px;
+}
+#taskName{
+    height: 35px;
+    width: 250px;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#taskDate{
+    height: 35px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
 }

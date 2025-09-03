@@ -12,19 +12,22 @@
     <div class="main">
         <div class="info">
             <label for="">Search</label>
-            <div class="inputbox">
-                <input type="search" placeholder="Search Date/Task Name">
-                <button>OK</button>
+            <div class="inputbox" style="position:relative;">
+                <input type="search" id="searchBox" placeholder="Search Date/Task Name"
+                    onkeyup="showSuggestions(this.value)">
+                <button onclick="searchOK()">OK</button>
+                <ul id="suggestions">
+                </ul>
             </div>
             <br><br>
             <label for=""></label>
             <select id="filter" onchange="filterTasks()">
-    <option value="" disabled selected>-- Filter --</option>
-    <option value="All">All</option>
-    <option value="Completed">Completed</option>
-    <option value="Pending">Pending</option>
-</select>
-<br><br>
+                <option value="" disabled selected>-- Filter --</option>
+                <option value="All">All</option>
+                <option value="Completed">Completed</option>
+                <option value="Pending">Pending</option>
+            </select>
+            <br><br>
             <button class="addbtn" onclick="displayTable()">Add</button>
         </div>
 
@@ -38,14 +41,15 @@
                 <label>Date:</label><br>
                 <input type="date" id="taskDate"><br><br>
 
-                <button onclick="addTask()">Save</button>
-                <button onclick="closePopup()">Close</button>
+                <button onclick="addTask()" class="savebtn">Save</button>
+                <button onclick="closePopup()" class="closebtn">Close</button>
             </div>
         </div>
         <div class="tasktable">
             <table border="1">
                 <thead>
                     <tr>
+                        <th></th>
                         <th>Task Name</th>
                         <th>Date</th>
                         <th>Status</th>

@@ -1,12 +1,14 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: rgb(150, 231, 231);
 }
-.info{
+
+.info {
     width: 100%;
     height: 20vh;
     background-color: aquamarine;
@@ -17,22 +19,90 @@ body{
     gap: 50px;
     padding: 0px 10px 0px 10px;
 }
-.info input{
+
+.inputbox {
     height: 40px;
     width: 400px;
+    display: flex;
     border-radius: 20px;
-    padding-left:10px ;
+    border: solid 1px;
 }
-.addbtn{
+
+.inputbox button {
+    flex: 1;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    border: solid 1px;
+}
+
+.info input {
+    padding-left: 10px;
+    border: none;
+    flex: 3;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.addbtn {
     width: 150px;
     height: 40px;
+    border-radius: 10px;
+    border: solid 1px;
+    background-color: rgb(215, 237, 205);
 }
-.popup{
+
+.popup {
     display: none;
+    width: 400px;
+    height: 300px;
     position: absolute;
     top: 50%;
+    padding-left: 35px;
     left: 50%;
-    background-color: beige;
-    padding: 30px;
-    transform: translate(-50%,-50%);
+    background-color: rgb(225, 225, 222);
+    transform: translate(-50%, -50%);
+}
+
+.popup input{
+    width: 80%;
+    height: 30px;
+}
+
+.tasktable {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0px 0px 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr,
+td,
+th {
+    border: solid 1px;
+    padding: 10px;
+}
+
+.edtbtn {
+    background-color: rgb(133, 133, 215);
+    border-radius: 5px;
+    width: 50px;
+    height: 25px;
+}
+
+.dltbtn {
+    background-color: rgb(223, 76, 76);
+    width: 50px;
+    border-radius: 5px;
+    height: 25px;
+}
+
+#filter {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
 }
